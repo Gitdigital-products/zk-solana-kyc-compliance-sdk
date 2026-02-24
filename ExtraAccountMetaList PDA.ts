@@ -4,7 +4,7 @@ import {
   getTransferHookInstruction 
 } from "@solana/spl-token";
 
-async function initializeExtraAccounts(
+export async function initializeExtraAccounts(
   program: anchor.Program<any>,
   mint: anchor.web3.PublicKey,
   payer: anchor.web3.Keypair
