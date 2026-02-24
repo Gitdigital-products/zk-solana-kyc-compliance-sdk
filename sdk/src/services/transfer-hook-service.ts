@@ -1,11 +1,9 @@
 import {
   Connection,
   PublicKey,
-  Signer,
   Transaction,
   TransactionSignature,
-  sendAndConfirmTransaction,
-  Keypair
+  sendAndConfirmTransaction
 } from '@solana/web3.js';
 import {
   InitializeCompliantMintParams,
