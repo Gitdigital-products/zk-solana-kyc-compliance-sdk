@@ -131,15 +131,6 @@ describe('KYC Flow Integration', () => {
 
   describe('Error Recovery', () => {
     test('should recover from RPC timeout', async () => {
-      // Create a connection with very short timeout
-      const fastConnection = new Connection(
-        Environment.getSolanaRpcUrl(),
-        {
-          commitment: 'processed',
-          confirmTransactionInitialTimeout: 1000 // 1 second timeout
-        }
-      );
-
       const fastClient = new SolanaKYCClient({
         rpcUrl: Environment.getSolanaRpcUrl(),
         network: Environment.getSolanaNetwork(),
