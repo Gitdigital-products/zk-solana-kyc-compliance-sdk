@@ -10,6 +10,18 @@ import {
  * @namespace Instructions
  */
 
+async function findExtraAccountsMetaPda(
+  mint: PublicKey,
+  programId: PublicKey
+): Promise<[PublicKey, number]> {
+  const seedPrefix = Buffer.from('extra-accounts');
+  const [pda, bump] = await PublicKey.findProgramAddress(
+    [seedPrefix, mint.toBuffer()],
+    programId
+  );
+  return [pda, bump];
+}
+
 /**
  * Creates an instruction to initialize a compliant mint.
  * @param {InitializeCompliantMintParams} params - Mint initialization parameters
