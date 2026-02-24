@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Progress } from '@/components/ui/progress';
-import { Progress } from '@/components/ui/progress';
+
 import { 
   Search, 
   AlertTriangle, 
@@ -61,9 +61,6 @@ const RiskDashboard = () => {
 
   const searchWallet = async () => {
     if (!walletSearch.trim()) return;
-    
-    setLoading(true);
-    try {
       const response = await fetch(`/api/risk/wallet/${walletSearch}`);
       if (!response.ok) {
         throw new Error(`Failed to fetch wallet risk: ${response.status} ${response.statusText}`);
@@ -88,6 +85,9 @@ const RiskDashboard = () => {
       console.error('Failed to force risk check:', error);
     }
   };
+      if (!response.ok) {
+        throw new Error(`Failed to force risk check: ${response.status} ${response.statusText}`);
+      }
 
   const RiskLevelBadge = ({ level }) => {
     const config = {
