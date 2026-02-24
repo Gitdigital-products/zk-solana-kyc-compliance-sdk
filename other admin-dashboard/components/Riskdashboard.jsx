@@ -88,6 +88,9 @@ const RiskDashboard = () => {
       console.error('Failed to force risk check:', error);
     }
   };
+      if (!response.ok) {
+        throw new Error(`Failed to force risk check: ${response.status} ${response.statusText}`);
+      }
 
   const RiskLevelBadge = ({ level }) => {
     const config = {
