@@ -3,7 +3,8 @@ import { TransferHookService } from './services/transfer-hook-service';
 import {
   InitializeCompliantMintParams,
   TransferCheckedWithHookParams,
-  SdkConfig
+  SdkConfig,
+  TransferStatus
 } from './types';
 import {
   WalletNotConnectedError,
