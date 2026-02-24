@@ -48,8 +48,16 @@ export class ComplianceSDK {
     try {
       const txSignature = await this.transferHookService.createCompliantMint(params);
       return txSignature;
-    } catch (error: any) {
-      throw new HookValidationError(`Failed to initialize mint: ${error.message}`);
+    } catch (error: unknown) {
+      let errorMessage = 'Unknown error';
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      } else if (typeof error === 'object' && error !== null && 'message' in error && typeof (error as any).message === 'string') {
+        errorMessage = (error as any).message;
+      } else if (typeof error === 'string') {
+        errorMessage = error;
+      }
+      throw new HookValidationError(`Failed to initialize mint: ${errorMessage}`);
     }
   }
 
