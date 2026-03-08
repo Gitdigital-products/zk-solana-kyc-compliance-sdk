@@ -1,5 +1,5 @@
-This is a comprehensive update for your README.md, designed to align with high-quality Solana ecosystem standards. It includes a "Badge Wall," clear architectural overviews, and technical implementation details based on your repository's focus on Token Extensions (Transfer Hooks & Permanent Delegates).
-Updated README.md
+[![Open Collective](https://img.shields.io/opencollective/all/solana-project-funds?label=Backers%20%26%20Sponsors)](https://opencollective.com/solana-project-funds)
+[![Financial Contributors](https://opencollective.com/solana-project-funds/tiers/badge.svg)](https://opencollective.com/solana-project-funds)
 
 # Solana KYC Compliance SDK 🛡️
 
@@ -701,7 +701,14 @@ GitDigital Products builds **infrastructure-grade tooling** for regulated blockc
 We focus on trust, resilience, and long-term viability — not hype cycles.
 ~
 -
+## 💰 Financial Support
 
+This project is funded by the Solana Project Funds Open Collective.
+
+If you want to support development of the zk‑Solana KYC Compliance SDK,  
+please consider becoming a backer or sponsor:
+
+👉 https://opencollective.com/solana-project-funds
 
 
 **Ship code. Earn trust. Scale responsibly.**
