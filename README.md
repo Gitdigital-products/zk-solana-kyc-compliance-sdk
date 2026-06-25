@@ -18,6 +18,21 @@
 
 **An institutional-grade Open-Source SDK for enforcing KYC/AML compliance directly at the token level on Solana.**
 
+GET /v1/repo/{org}/{repo}/status
+
+{
+  "tier": "Resilience Verified",
+  "source_status": "Private",
+  "proven_metrics": ["continuity", "stickiness"],
+  "unproven_metrics": ["dependency", "risk_coverage"],
+  "scores": { "H": 0.72, "P": 0.21 },
+  "limitations": "P score capped at 0.3 without DependencyCircuit",
+  "upgrade_path": "Open source library code to unlock Public Good Certified"
+}
+
+
+
+
 ---
 
 ## 📖 Overview
